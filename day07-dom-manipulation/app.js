@@ -66,3 +66,26 @@ const jobs = [
     postDate: "6 days ago",
   },
 ];
+
+console.log(document);
+function createNewJob(){
+  const jobDiv=document.createElement("div");
+  jobDiv.className="j-desc";
+
+  const jobDetails=document.createElement("div");
+  jobDetails.className="j-desc__details";
+
+  const jobTitleHeader=document.createElement("h2");
+  jobTitleHeader.className="j-desc__details";
+  jobTitleHeader.textContent="NEW JOB";
+
+  jobDetails.append(jobTitleHeader);
+
+  jobDiv.append(jobDetails);
+
+  document.querySelector("#jobs").append(jobDiv);
+
+  debugger;
+}
+
+createNewJob();
